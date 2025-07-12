@@ -10,7 +10,7 @@ const port = 4000;
 
 (async () => {
   try {
-    const allowedOrigins = ['http://localhost:5173','https://mern-simple-auth.netlify.app',];
+    const allowedOrigins = ['http://localhost:5173','https://mern-auth-project-rie8.onrender.com',];
     await connectdb();
     app.use(express.json());
     app.use(cookieParser());
