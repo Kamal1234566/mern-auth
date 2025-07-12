@@ -1,0 +1,245 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.login-btn {
+  background-color: #4f46e5;
+  color: white;
+  font-size: 16px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #3730a3;
+}
+
+.arrow-icon {
+  height: 18px;
+  width: 18px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* User Info Dropdown Container */
+.navbar > div {
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  color: #4f46e5;
+  cursor: pointer;
+}
+
+/* Dropdown Menu */
+.navbar > div ul {
+  position: absolute;
+  right: 0;
+  top: 120%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 0;
+  width: 150px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Show dropdown on hover */
+.navbar > div:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Items */
+.navbar > div ul li {
+  list-style: none;
+  padding: 10px 16px;
+  color: #333;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+.navbar > div ul li:hover {
+  background-color: #f5f5f5;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #4f46e5;
+  color: white;
+  font-size: 16px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.login-btn:hover {
+  background-color: #3730a3;
+  transform: translateY(-2px);
+}
+
+/* Arrow Icon */
+.arrow-icon {
+  height: 18px;
+  width: 18px;
+}
+
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    position: relative;
+  }
+
+  /* Make login button top-right and smaller */
+  .login-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    gap: 4px;
+    width: auto;
+  }
+
+  .arrow-icon {
+    height: 14px;
+    width: 14px;
+  }
+
+  .arrow-icon {
+    height: 14px;
+    width: 14px;
+  }
+
+  /* User icon: top-right */
+  .user-dropdown {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4f46e5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .user-dropdown-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #4f46e5;
+    object-fit: cover;
+  }
+  .user_name{
+    position: absolute;
+    right: -300px;
+    top:-50px
+
+  }
+  /* Dropdown Menu: hidden by default */
+  .user-dropdown ul {
+    position: absolute;
+    top: 56px;
+    /* left:120px; */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 0;
+    width: 140px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 999;
+  }
+
+  /* Show on click */
+  .user-dropdown.active ul {
+    display: block;
+  }
+
+  .user-dropdown ul li {
+    list-style: none;
+    padding: 10px 16px;
+    font-size: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+
+  .user-dropdown ul li:last-child {
+    border-bottom: none;
+  }
+
+  .user-dropdown ul li:hover {
+    background-color: #f5f5f5;
+  }
+}

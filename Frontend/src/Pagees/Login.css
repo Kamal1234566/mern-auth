@@ -1,0 +1,148 @@
+/* Login.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f4ff, #ffffff);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 16px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.login-container img {
+  height: 50px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.login-box {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #1f2937;
+}
+
+.login-box p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form div {
+  position: relative;
+}
+
+form img {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  opacity: 0.6;
+}
+
+form input {
+  width: 100% ;
+  padding: 10px 10px 10px 38px ;
+  border: 1px solid #cbd5e1 ;
+  border-radius: 6px ;
+  font-size: 14px ;
+  outline: none ;
+  transition: border 0.3s ;
+}
+
+form input:focus {
+  border-color: #4f46e5;
+}
+
+form > p {
+  text-align: right;
+  font-size: 13px;
+  color: #4f46e5;
+  cursor: pointer;
+  margin: 0;
+}
+
+button {
+  padding: 10px;
+  font-size: 15px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #4338ca;
+}
+
+.login-box > p {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.login-box > p span {
+  color: #4f46e5;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+/* Forcefully apply styles to the Full Name input */
+.username-input-force {
+  width: 100% !important;
+  /* padding: 0px 0px 0px -148px !important ; */
+  border: 1px solid #cbd5e1 !important ;
+  border-radius: 6px !important ;
+  font-size: 14px !important;
+  outline: none !important;
+  transition: border 0.3s  !important;
+  
+}
+
+.username-input-force:focus {
+  border-color: #4f46e5 !important;
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 24px 14px;
+  }
+
+  form input {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+

@@ -1,0 +1,106 @@
+/* Header.css */
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  overflow: hidden;
+}
+
+.header-img {
+  height: 40px; /* As requested */
+  width: auto;
+  margin-bottom: 10px;
+  animation: floatIn 0.8s ease-in-out;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1f2937;
+}
+
+.hand-icon {
+  height: 20px;
+  width: 20px;
+  animation: wave 1.5s infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.header-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 4px 0;
+  color: #4b5563;
+}
+
+.header-description {
+  font-size: 14px;
+  color: #6b7280;
+  max-width: 300px;
+  margin: 4px 0 12px;
+  line-height: 1.4;
+}
+
+.get-started-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #3730a3;
+  transform: scale(1.05);
+}
+
+/* Responsive tweaks for very small screens */
+@media (max-width: 400px) {
+  .header-title {
+    font-size: 18px;
+  }
+
+  .header-subtitle {
+    font-size: 14px;
+  }
+
+  .header-description {
+    font-size: 13px;
+  }
+
+  .get-started-btn {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
