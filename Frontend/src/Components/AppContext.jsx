@@ -7,7 +7,7 @@ axios.defaults.withCredentials = true;
 export const AppContent = createContext();
 
 export const AppContextProvider = (props) => {
-  const background_url = import.meta.env.VITE_BACKEND_URL;
+  const background_url = "https://mern-auth-nrxl.onrender.com";
   const [loggedIn, setIsloggedin] = useState(false);
   const [userData, setUserdata] = useState();
 
